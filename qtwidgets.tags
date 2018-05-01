@@ -17616,7 +17616,7 @@
             <anchor>setItemHidden</anchor>
             <arglist>(const QListWidgetItem *item, bool hide)</arglist>
         </member>
-        <member kind="function" protection="protected" virtualness="virtual" static="no">
+        <member kind="function" protection="public" virtualness="virtual" static="no">
             <type>virtual void</type>
             <name>dropEvent</name>
             <anchorfile>qlistwidget.html</anchorfile>
@@ -17742,21 +17742,21 @@
             <anchor>supportedDropActions</anchor>
             <arglist>() const</arglist>
         </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
+        <member kind="function" protection="protected" virtualness="non" static="no">
             <type>QList&lt;QListWidgetItem *&gt;</type>
             <name>items</name>
             <anchorfile>qlistwidget.html</anchorfile>
             <anchor>items</anchor>
             <arglist>(const QMimeData *data) const</arglist>
         </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
+        <member kind="function" protection="protected" virtualness="non" static="no">
             <type>QModelIndex</type>
             <name>indexFromItem</name>
             <anchorfile>qlistwidget.html</anchorfile>
             <anchor>indexFromItem</anchor>
             <arglist>(const QListWidgetItem *item) const</arglist>
         </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
+        <member kind="function" protection="protected" virtualness="non" static="no">
             <type>QListWidgetItem *</type>
             <name>itemFromIndex</name>
             <anchorfile>qlistwidget.html</anchorfile>
@@ -19339,21 +19339,21 @@
             <anchor>supportedDropActions</anchor>
             <arglist>() const</arglist>
         </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
+        <member kind="function" protection="protected" virtualness="non" static="no">
             <type>QList&lt;QTableWidgetItem *&gt;</type>
             <name>items</name>
             <anchorfile>qtablewidget.html</anchorfile>
             <anchor>items</anchor>
             <arglist>(const QMimeData *data) const</arglist>
         </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
+        <member kind="function" protection="protected" virtualness="non" static="no">
             <type>QModelIndex</type>
             <name>indexFromItem</name>
             <anchorfile>qtablewidget.html</anchorfile>
             <anchor>indexFromItem</anchor>
             <arglist>(const QTableWidgetItem *item) const</arglist>
         </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
+        <member kind="function" protection="protected" virtualness="non" static="no">
             <type>QTableWidgetItem *</type>
             <name>itemFromIndex</name>
             <anchorfile>qtablewidget.html</anchorfile>
@@ -21148,21 +21148,21 @@
             <anchor>supportedDropActions</anchor>
             <arglist>() const</arglist>
         </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
+        <member kind="function" protection="protected" virtualness="non" static="no">
             <type>QList&lt;QTreeWidgetItem *&gt;</type>
             <name>items</name>
             <anchorfile>qtreewidget-obsolete.html</anchorfile>
             <anchor>items</anchor>
             <arglist>(const QMimeData *data) const</arglist>
         </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
+        <member kind="function" protection="protected" virtualness="non" static="no">
             <type>QModelIndex</type>
             <name>indexFromItem</name>
             <anchorfile>qtreewidget.html</anchorfile>
             <anchor>indexFromItem</anchor>
             <arglist>(const QTreeWidgetItem *item, int column) const</arglist>
         </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
+        <member kind="function" protection="protected" virtualness="non" static="no">
             <type>QTreeWidgetItem *</type>
             <name>itemFromIndex</name>
             <anchorfile>qtreewidget.html</anchorfile>

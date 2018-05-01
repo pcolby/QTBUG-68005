@@ -86,7 +86,6 @@
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtreewidget.html#editItem">editItem</a></b>(QTreeWidgetItem *<i>item</i>, int <i>column</i> = 0)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QList&lt;QTreeWidgetItem *&gt; </td><td class="memItemRight bottomAlign"><b><a href="qtreewidget.html#findItems">findItems</a></b>(const QString &amp;<i>text</i>, Qt::MatchFlags <i>flags</i>, int <i>column</i> = 0) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QTreeWidgetItem *</td><td class="memItemRight bottomAlign"><b><a href="qtreewidget.html#headerItem">headerItem</a></b>() const</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QModelIndex </td><td class="memItemRight bottomAlign"><b><a href="qtreewidget.html#indexFromItem">indexFromItem</a></b>(const QTreeWidgetItem *<i>item</i>, int <i>column</i> = 0) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtreewidget.html#indexOfTopLevelItem">indexOfTopLevelItem</a></b>(QTreeWidgetItem *<i>item</i>) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtreewidget.html#insertTopLevelItem">insertTopLevelItem</a></b>(int <i>index</i>, QTreeWidgetItem *<i>item</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtreewidget.html#insertTopLevelItems">insertTopLevelItems</a></b>(int <i>index</i>, const QList&lt;QTreeWidgetItem *&gt; &amp;<i>items</i>)</td></tr>
@@ -97,7 +96,6 @@
 <tr><td class="memItemLeft rightAlign topAlign"> QTreeWidgetItem *</td><td class="memItemRight bottomAlign"><b><a href="qtreewidget.html#itemAt">itemAt</a></b>(const QPoint &amp;<i>p</i>) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QTreeWidgetItem *</td><td class="memItemRight bottomAlign"><b><a href="qtreewidget.html#itemAt-1">itemAt</a></b>(int <i>x</i>, int <i>y</i>) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QTreeWidgetItem *</td><td class="memItemRight bottomAlign"><b><a href="qtreewidget.html#itemBelow">itemBelow</a></b>(const QTreeWidgetItem *<i>item</i>) const</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QTreeWidgetItem *</td><td class="memItemRight bottomAlign"><b><a href="qtreewidget.html#itemFromIndex">itemFromIndex</a></b>(const QModelIndex &amp;<i>index</i>) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QWidget *</td><td class="memItemRight bottomAlign"><b><a href="qtreewidget.html#itemWidget">itemWidget</a></b>(QTreeWidgetItem *<i>item</i>, int <i>column</i>) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtreewidget.html#openPersistentEditor">openPersistentEditor</a></b>(QTreeWidgetItem *<i>item</i>, int <i>column</i> = 0)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtreewidget.html#removeItemWidget">removeItemWidget</a></b>(QTreeWidgetItem *<i>item</i>, int <i>column</i>)</td></tr>
@@ -167,6 +165,8 @@
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtreewidget.html#dropMimeData">dropMimeData</a></b>(QTreeWidgetItem *<i>parent</i>, int <i>index</i>, const QMimeData *<i>data</i>, Qt::DropAction <i>action</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qtreewidget.html#event">event</a></b>(QEvent *<i>e</i>) override</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QModelIndex </td><td class="memItemRight bottomAlign"><b><a href="qtreewidget.html#indexFromItem">indexFromItem</a></b>(const QTreeWidgetItem *<i>item</i>, int <i>column</i> = 0) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QTreeWidgetItem *</td><td class="memItemRight bottomAlign"><b><a href="qtreewidget.html#itemFromIndex">itemFromIndex</a></b>(const QModelIndex &amp;<i>index</i>) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual QMimeData *</td><td class="memItemRight bottomAlign"><b><a href="qtreewidget.html#mimeData">mimeData</a></b>(const QList&lt;QTreeWidgetItem *&gt; <i>items</i>) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual QStringList </td><td class="memItemRight bottomAlign"><b><a href="qtreewidget.html#mimeTypes">mimeTypes</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual Qt::DropActions </td><td class="memItemRight bottomAlign"><b><a href="qtreewidget.html#supportedDropActions">supportedDropActions</a></b>() const</td></tr>
@@ -323,7 +323,7 @@
 <p><b>See also </b><a href="qtreewidget.html#setHeaderItem">setHeaderItem</a>().</p>
 <!-- @@@headerItem -->
 <!-- $$$indexFromItem[overload1]$$$indexFromItemconstQTreeWidgetItem*int -->
-<h3 class="fn" id="indexFromItem"><a name="indexFromItem"></a><span class="type">QModelIndex</span> QTreeWidget::<span class="name">indexFromItem</span>(const <span class="type"><a href="qtreewidgetitem.html">QTreeWidgetItem</a></span> *<i>item</i>, <span class="type">int</span> <i>column</i> = 0) const</h3>
+<h3 class="fn" id="indexFromItem"><a name="indexFromItem"></a><code>[protected] </code><span class="type">QModelIndex</span> QTreeWidget::<span class="name">indexFromItem</span>(const <span class="type"><a href="qtreewidgetitem.html">QTreeWidgetItem</a></span> *<i>item</i>, <span class="type">int</span> <i>column</i> = 0) const</h3>
 <p>Returns the QModelIndex associated with the given <i>item</i> in the given <i>column</i>.</p>
 <p><b>Note: </b>In Qt versions prior to 5.7, this function took a non-<code>const</code> <i>item</i>.</p><p><b>See also </b><a href="qtreewidget.html#itemFromIndex">itemFromIndex</a>() and <a href="qtreewidget.html#topLevelItem">topLevelItem</a>().</p>
 <!-- @@@indexFromItem -->
@@ -417,7 +417,7 @@
 <p><b>Note: </b>This signal will not be emitted if an item changes its state when <a href="qtreeview.html#expandAll">expandAll</a>() is invoked.</p><p><b>See also </b><a href="qtreewidget-obsolete.html#setItemExpanded">setItemExpanded</a>(), <a href="qtreewidgetitem.html#isExpanded">QTreeWidgetItem::isExpanded</a>(), <a href="qtreewidget.html#itemCollapsed">itemCollapsed</a>(), and <a href="qtreewidget.html#expandItem">expandItem</a>().</p>
 <!-- @@@itemExpanded -->
 <!-- $$$itemFromIndex[overload1]$$$itemFromIndexconstQModelIndex& -->
-<h3 class="fn" id="itemFromIndex"><a name="itemFromIndex"></a><span class="type"><a href="qtreewidgetitem.html">QTreeWidgetItem</a></span> *QTreeWidget::<span class="name">itemFromIndex</span>(const <span class="type">QModelIndex</span> &amp;<i>index</i>) const</h3>
+<h3 class="fn" id="itemFromIndex"><a name="itemFromIndex"></a><code>[protected] </code><span class="type"><a href="qtreewidgetitem.html">QTreeWidgetItem</a></span> *QTreeWidget::<span class="name">itemFromIndex</span>(const <span class="type">QModelIndex</span> &amp;<i>index</i>) const</h3>
 <p>Returns a pointer to the <a href="qtreewidgetitem.html">QTreeWidgetItem</a> associated with the given <i>index</i>.</p>
 <p><b>See also </b><a href="qtreewidget.html#indexFromItem">indexFromItem</a>().</p>
 <!-- @@@itemFromIndex -->

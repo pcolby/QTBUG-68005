@@ -87,14 +87,11 @@
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtablewidget.html#editItem">editItem</a></b>(QTableWidgetItem *<i>item</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QList&lt;QTableWidgetItem *&gt; </td><td class="memItemRight bottomAlign"><b><a href="qtablewidget.html#findItems">findItems</a></b>(const QString &amp;<i>text</i>, Qt::MatchFlags <i>flags</i>) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QTableWidgetItem *</td><td class="memItemRight bottomAlign"><b><a href="qtablewidget.html#horizontalHeaderItem">horizontalHeaderItem</a></b>(int <i>column</i>) const</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QModelIndex </td><td class="memItemRight bottomAlign"><b><a href="qtablewidget.html#indexFromItem">indexFromItem</a></b>(const QTableWidgetItem *<i>item</i>) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qtablewidget.html#isPersistentEditorOpen">isPersistentEditorOpen</a></b>(QTableWidgetItem *<i>item</i>) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QTableWidgetItem *</td><td class="memItemRight bottomAlign"><b><a href="qtablewidget.html#item">item</a></b>(int <i>row</i>, int <i>column</i>) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QTableWidgetItem *</td><td class="memItemRight bottomAlign"><b><a href="qtablewidget.html#itemAt">itemAt</a></b>(const QPoint &amp;<i>point</i>) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QTableWidgetItem *</td><td class="memItemRight bottomAlign"><b><a href="qtablewidget.html#itemAt-1">itemAt</a></b>(int <i>ax</i>, int <i>ay</i>) const</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QTableWidgetItem *</td><td class="memItemRight bottomAlign"><b><a href="qtablewidget.html#itemFromIndex">itemFromIndex</a></b>(const QModelIndex &amp;<i>index</i>) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> const QTableWidgetItem *</td><td class="memItemRight bottomAlign"><b><a href="qtablewidget.html#itemPrototype">itemPrototype</a></b>() const</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QList&lt;QTableWidgetItem *&gt; </td><td class="memItemRight bottomAlign"><b><a href="qtablewidget.html#items">items</a></b>(const QMimeData *<i>data</i>) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtablewidget.html#openPersistentEditor">openPersistentEditor</a></b>(QTableWidgetItem *<i>item</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtablewidget.html#removeCellWidget">removeCellWidget</a></b>(int <i>row</i>, int <i>column</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtablewidget.html#row">row</a></b>(const QTableWidgetItem *<i>item</i>) const</td></tr>
@@ -175,6 +172,9 @@
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtablewidget.html#dropMimeData">dropMimeData</a></b>(int <i>row</i>, int <i>column</i>, const QMimeData *<i>data</i>, Qt::DropAction <i>action</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qtablewidget.html#event">event</a></b>(QEvent *<i>e</i>) override</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QModelIndex </td><td class="memItemRight bottomAlign"><b><a href="qtablewidget.html#indexFromItem">indexFromItem</a></b>(const QTableWidgetItem *<i>item</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QTableWidgetItem *</td><td class="memItemRight bottomAlign"><b><a href="qtablewidget.html#itemFromIndex">itemFromIndex</a></b>(const QModelIndex &amp;<i>index</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QList&lt;QTableWidgetItem *&gt; </td><td class="memItemRight bottomAlign"><b><a href="qtablewidget.html#items">items</a></b>(const QMimeData *<i>data</i>) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual QMimeData *</td><td class="memItemRight bottomAlign"><b><a href="qtablewidget.html#mimeData">mimeData</a></b>(const QList&lt;QTableWidgetItem *&gt; <i>items</i>) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual QStringList </td><td class="memItemRight bottomAlign"><b><a href="qtablewidget.html#mimeTypes">mimeTypes</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual Qt::DropActions </td><td class="memItemRight bottomAlign"><b><a href="qtablewidget.html#supportedDropActions">supportedDropActions</a></b>() const</td></tr>
@@ -387,7 +387,7 @@
 <p><b>See also </b><a href="qtablewidget.html#setHorizontalHeaderItem">setHorizontalHeaderItem</a>().</p>
 <!-- @@@horizontalHeaderItem -->
 <!-- $$$indexFromItem[overload1]$$$indexFromItemconstQTableWidgetItem* -->
-<h3 class="fn" id="indexFromItem"><a name="indexFromItem"></a><span class="type">QModelIndex</span> QTableWidget::<span class="name">indexFromItem</span>(const <span class="type"><a href="qtablewidgetitem.html">QTableWidgetItem</a></span> *<i>item</i>) const</h3>
+<h3 class="fn" id="indexFromItem"><a name="indexFromItem"></a><code>[protected] </code><span class="type">QModelIndex</span> QTableWidget::<span class="name">indexFromItem</span>(const <span class="type"><a href="qtablewidgetitem.html">QTableWidgetItem</a></span> *<i>item</i>) const</h3>
 <p>Returns the QModelIndex associated with the given <i>item</i>.</p>
 <p><b>Note: </b>In Qt versions prior to 5.10, this function took a non-<code>const</code> <i>item</i>.</p><!-- @@@indexFromItem -->
 <!-- $$$insertColumn[overload1]$$$insertColumnint -->
@@ -441,7 +441,7 @@
 <p>This signal is only emitted when <a href="qwidget.html#mouseTracking-prop">mouseTracking</a> is turned on, or when a mouse button is pressed while moving into an item.</p>
 <!-- @@@itemEntered -->
 <!-- $$$itemFromIndex[overload1]$$$itemFromIndexconstQModelIndex& -->
-<h3 class="fn" id="itemFromIndex"><a name="itemFromIndex"></a><span class="type"><a href="qtablewidgetitem.html">QTableWidgetItem</a></span> *QTableWidget::<span class="name">itemFromIndex</span>(const <span class="type">QModelIndex</span> &amp;<i>index</i>) const</h3>
+<h3 class="fn" id="itemFromIndex"><a name="itemFromIndex"></a><code>[protected] </code><span class="type"><a href="qtablewidgetitem.html">QTableWidgetItem</a></span> *QTableWidget::<span class="name">itemFromIndex</span>(const <span class="type">QModelIndex</span> &amp;<i>index</i>) const</h3>
 <p>Returns a pointer to the <a href="qtablewidgetitem.html">QTableWidgetItem</a> associated with the given <i>index</i>.</p>
 <!-- @@@itemFromIndex -->
 <!-- $$$itemPressed[overload1]$$$itemPressedQTableWidgetItem* -->
@@ -459,7 +459,7 @@
 <p><b>See also </b><a href="qtablewidget.html#selectedItems">selectedItems</a>() and <a href="qtablewidgetitem.html#isSelected">QTableWidgetItem::isSelected</a>().</p>
 <!-- @@@itemSelectionChanged -->
 <!-- $$$items[overload1]$$$itemsconstQMimeData* -->
-<h3 class="fn" id="items"><a name="items"></a><span class="type">QList</span>&lt;<span class="type"><a href="qtablewidgetitem.html">QTableWidgetItem</a></span> *&gt; QTableWidget::<span class="name">items</span>(const <span class="type">QMimeData</span> *<i>data</i>) const</h3>
+<h3 class="fn" id="items"><a name="items"></a><code>[protected] </code><span class="type">QList</span>&lt;<span class="type"><a href="qtablewidgetitem.html">QTableWidgetItem</a></span> *&gt; QTableWidget::<span class="name">items</span>(const <span class="type">QMimeData</span> *<i>data</i>) const</h3>
 <p>Returns a list of pointers to the items contained in the <i>data</i> object. If the object was not created by a <a href="qtreewidget.html">QTreeWidget</a> in the same process, the list is empty.</p>
 <!-- @@@items -->
 <!-- $$$mimeData[overload1]$$$mimeDataconstQList<QTableWidgetItem*> -->

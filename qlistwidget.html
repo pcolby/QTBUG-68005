@@ -44,7 +44,6 @@
 <li class="level1"><a href="#public-slots">Public Slots</a></li>
 <li class="level1"><a href="#signals">Signals</a></li>
 <li class="level1"><a href="#protected-functions">Protected Functions</a></li>
-<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
@@ -87,7 +86,6 @@
 <tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qlistwidget.html#currentRow-prop">currentRow</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qlistwidget.html#editItem">editItem</a></b>(QListWidgetItem *<i>item</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QList&lt;QListWidgetItem *&gt; </td><td class="memItemRight bottomAlign"><b><a href="qlistwidget.html#findItems">findItems</a></b>(const QString &amp;<i>text</i>, Qt::MatchFlags <i>flags</i>) const</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QModelIndex </td><td class="memItemRight bottomAlign"><b><a href="qlistwidget.html#indexFromItem">indexFromItem</a></b>(const QListWidgetItem *<i>item</i>) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qlistwidget.html#insertItem">insertItem</a></b>(int <i>row</i>, QListWidgetItem *<i>item</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qlistwidget.html#insertItem-1">insertItem</a></b>(int <i>row</i>, const QString &amp;<i>label</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qlistwidget.html#insertItems">insertItems</a></b>(int <i>row</i>, const QStringList &amp;<i>labels</i>)</td></tr>
@@ -96,9 +94,7 @@
 <tr><td class="memItemLeft rightAlign topAlign"> QListWidgetItem *</td><td class="memItemRight bottomAlign"><b><a href="qlistwidget.html#item">item</a></b>(int <i>row</i>) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QListWidgetItem *</td><td class="memItemRight bottomAlign"><b><a href="qlistwidget.html#itemAt">itemAt</a></b>(const QPoint &amp;<i>p</i>) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QListWidgetItem *</td><td class="memItemRight bottomAlign"><b><a href="qlistwidget.html#itemAt-1">itemAt</a></b>(int <i>x</i>, int <i>y</i>) const</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QListWidgetItem *</td><td class="memItemRight bottomAlign"><b><a href="qlistwidget.html#itemFromIndex">itemFromIndex</a></b>(const QModelIndex &amp;<i>index</i>) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QWidget *</td><td class="memItemRight bottomAlign"><b><a href="qlistwidget.html#itemWidget">itemWidget</a></b>(QListWidgetItem *<i>item</i>) const</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QList&lt;QListWidgetItem *&gt; </td><td class="memItemRight bottomAlign"><b><a href="qlistwidget.html#items">items</a></b>(const QMimeData *<i>data</i>) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qlistwidget.html#openPersistentEditor">openPersistentEditor</a></b>(QListWidgetItem *<i>item</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qlistwidget.html#removeItemWidget">removeItemWidget</a></b>(QListWidgetItem *<i>item</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qlistwidget.html#row">row</a></b>(const QListWidgetItem *<i>item</i>) const</td></tr>
@@ -116,6 +112,7 @@
 <a name="reimplemented-public-functions"></a>
 <h2 id="reimplemented-public-functions">Reimplemented Public Functions</h2>
 <div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qlistwidget.html#dropEvent">dropEvent</a></b>(QDropEvent *<i>event</i>) override</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qlistwidget.html#setSelectionModel">setSelectionModel</a></b>(QItemSelectionModel *<i>selectionModel</i>) override</td></tr>
 </table></div>
 <ul>
@@ -159,14 +156,12 @@
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qlistwidget.html#dropMimeData">dropMimeData</a></b>(int <i>index</i>, const QMimeData *<i>data</i>, Qt::DropAction <i>action</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qlistwidget.html#event">event</a></b>(QEvent *<i>e</i>) override</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QModelIndex </td><td class="memItemRight bottomAlign"><b><a href="qlistwidget.html#indexFromItem">indexFromItem</a></b>(const QListWidgetItem *<i>item</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QListWidgetItem *</td><td class="memItemRight bottomAlign"><b><a href="qlistwidget.html#itemFromIndex">itemFromIndex</a></b>(const QModelIndex &amp;<i>index</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QList&lt;QListWidgetItem *&gt; </td><td class="memItemRight bottomAlign"><b><a href="qlistwidget.html#items">items</a></b>(const QMimeData *<i>data</i>) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual QMimeData *</td><td class="memItemRight bottomAlign"><b><a href="qlistwidget.html#mimeData">mimeData</a></b>(const QList&lt;QListWidgetItem *&gt; <i>items</i>) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual QStringList </td><td class="memItemRight bottomAlign"><b><a href="qlistwidget.html#mimeTypes">mimeTypes</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual Qt::DropActions </td><td class="memItemRight bottomAlign"><b><a href="qlistwidget.html#supportedDropActions">supportedDropActions</a></b>() const</td></tr>
-</table></div>
-<a name="reimplemented-protected-functions"></a>
-<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
-<div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qlistwidget.html#dropEvent">dropEvent</a></b>(QDropEvent *<i>event</i>) override</td></tr>
 </table></div>
 <ul>
 <li class="fn">28 protected functions inherited from <a href="qlistview.html#protected-functions">QListView</a></li>
@@ -310,7 +305,7 @@
 <p><i>currentText</i> is the text data in the current item. If there is no current item, the <i>currentText</i> is invalid.</p>
 <!-- @@@currentTextChanged -->
 <!-- $$$dropEvent[overload1]$$$dropEventQDropEvent* -->
-<h3 class="fn" id="dropEvent"><a name="dropEvent"></a><code>[override virtual protected] </code><span class="type">void</span> QListWidget::<span class="name">dropEvent</span>(<span class="type">QDropEvent</span> *<i>event</i>)</h3>
+<h3 class="fn" id="dropEvent"><a name="dropEvent"></a><code>[override virtual] </code><span class="type">void</span> QListWidget::<span class="name">dropEvent</span>(<span class="type">QDropEvent</span> *<i>event</i>)</h3>
 <p>Reimplemented from <a href="qwidget.html#dropEvent">QWidget::dropEvent</a>().</p>
 <!-- @@@dropEvent -->
 <!-- $$$dropMimeData[overload1]$$$dropMimeDataintconstQMimeData*Qt::DropAction -->
@@ -330,7 +325,7 @@
 <p>Finds items with the text that matches the string <i>text</i> using the given <i>flags</i>.</p>
 <!-- @@@findItems -->
 <!-- $$$indexFromItem[overload1]$$$indexFromItemconstQListWidgetItem* -->
-<h3 class="fn" id="indexFromItem"><a name="indexFromItem"></a><span class="type">QModelIndex</span> QListWidget::<span class="name">indexFromItem</span>(const <span class="type"><a href="qlistwidgetitem.html">QListWidgetItem</a></span> *<i>item</i>) const</h3>
+<h3 class="fn" id="indexFromItem"><a name="indexFromItem"></a><code>[protected] </code><span class="type">QModelIndex</span> QListWidget::<span class="name">indexFromItem</span>(const <span class="type"><a href="qlistwidgetitem.html">QListWidgetItem</a></span> *<i>item</i>) const</h3>
 <p>Returns the QModelIndex associated with the given <i>item</i>.</p>
 <p><b>Note: </b>In Qt versions prior to 5.10, this function took a non-<code>const</code> <i>item</i>.</p><!-- @@@indexFromItem -->
 <!-- $$$insertItem[overload1]$$$insertItemintQListWidgetItem* -->
@@ -392,7 +387,7 @@
 <p><b>See also </b><a href="qwidget.html#mouseTracking-prop">QWidget::setMouseTracking</a>().</p>
 <!-- @@@itemEntered -->
 <!-- $$$itemFromIndex[overload1]$$$itemFromIndexconstQModelIndex& -->
-<h3 class="fn" id="itemFromIndex"><a name="itemFromIndex"></a><span class="type"><a href="qlistwidgetitem.html">QListWidgetItem</a></span> *QListWidget::<span class="name">itemFromIndex</span>(const <span class="type">QModelIndex</span> &amp;<i>index</i>) const</h3>
+<h3 class="fn" id="itemFromIndex"><a name="itemFromIndex"></a><code>[protected] </code><span class="type"><a href="qlistwidgetitem.html">QListWidgetItem</a></span> *QListWidget::<span class="name">itemFromIndex</span>(const <span class="type">QModelIndex</span> &amp;<i>index</i>) const</h3>
 <p>Returns a pointer to the <a href="qlistwidgetitem.html">QListWidgetItem</a> associated with the given <i>index</i>.</p>
 <!-- @@@itemFromIndex -->
 <!-- $$$itemPressed[overload1]$$$itemPressedQListWidgetItem* -->
@@ -412,7 +407,7 @@
 <p><b>See also </b><a href="qlistwidget.html#setItemWidget">setItemWidget</a>() and <a href="qlistwidget.html#removeItemWidget">removeItemWidget</a>().</p>
 <!-- @@@itemWidget -->
 <!-- $$$items[overload1]$$$itemsconstQMimeData* -->
-<h3 class="fn" id="items"><a name="items"></a><span class="type">QList</span>&lt;<span class="type"><a href="qlistwidgetitem.html">QListWidgetItem</a></span> *&gt; QListWidget::<span class="name">items</span>(const <span class="type">QMimeData</span> *<i>data</i>) const</h3>
+<h3 class="fn" id="items"><a name="items"></a><code>[protected] </code><span class="type">QList</span>&lt;<span class="type"><a href="qlistwidgetitem.html">QListWidgetItem</a></span> *&gt; QListWidget::<span class="name">items</span>(const <span class="type">QMimeData</span> *<i>data</i>) const</h3>
 <p>Returns a list of pointers to the items contained in the <i>data</i> object. If the object was not created by a <a href="qlistwidget.html">QListWidget</a> in the same process, the list is empty.</p>
 <!-- @@@items -->
 <!-- $$$mimeData[overload1]$$$mimeDataconstQList<QListWidgetItem*> -->
